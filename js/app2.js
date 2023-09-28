@@ -40,10 +40,11 @@ const album1 = {
   // Exercise 3: Accessing the string 'LP' from album2's formats array, add it to the end of album3's formats array.
   album3.albumDetails.formats.push(album2.albumDetails.formats[0])
   
-  //album3.albumDetails.released = toLocaleDateString('August 3, 1979')
   // Exercise 4:  Update the released property of album3 from a string into a Date object using that string
-    
+
+  album3.albumDetails.released = new Date(album3.albumDetails.released)
   
+
   const album4 = {
     title: 'Remain in Light',
     albumDetails: {
@@ -125,24 +126,25 @@ let formats = album6.albumDetails.formats
   
   
   
-//   // Exercise 10:  Using the pre-defined variable named albumIdx below, assign the albumDetails object of the album located within the talkingHeadsAlbums array at the index represented by the value of albumIdx to a variable named albumDetails
+//   Exercise 10:  Using the pre-defined variable named albumIdx below, assign the albumDetails object of 
+//the album located within the talkingHeadsAlbums array at the index represented by the value of albumIdx 
+//to a variable named albumDetails
   
-//   let albumIdx = 4;
+  let albumIdx = 4;
   
-  
-  
+  let albumDetails = talkingHeadsAlbums[albumIdx].albumDetails  
   
   /********** Don't look below here **********/
   console.log('=========================== Excercise console.logs =============')
   console.log('Exercise 1:', title);
   console.log('Exercise 2:', label);
   console.log('Exercise 3:', album3.albumDetails.formats[1]);
-  //console.log('Exercise 4:', album3.albumDetails.released.toLocaleDateString());
+  console.log('Exercise 4:', album3.albumDetails.released.toLocaleDateString());
   console.log('Exercise 5:', album4.albumDetails.label);
   console.log('Exercise 6:', album5.albumDetails.labels[1]);
   console.log('Exercise 7:', formats);
   console.log('Exercise 8:', labels);
   console.log('Exercise 9:', talkingHeadsAlbums[5].albumDetails.released.toLocaleDateString());
-//   console.log('Exercise 10:', albumDetails);
-//   console.log('===================================================================')
+  console.log('Exercise 10:', albumDetails);
+  console.log('===================================================================')
   
